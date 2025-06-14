@@ -1,0 +1,211 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+/* Contenedor principal */
+.login-container {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    overflow: hidden;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Encabezado */
+.login-header {
+    padding: 30px;
+    text-align: center;
+    background: linear-gradient(135deg, #4a6cf7, #7a54e8);
+    color: white;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    margin-right: 15px;
+   object-fit: contain;
+}
+
+.logo-text h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-text p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.login-header h2 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+/* Formulario */
+.login-form {
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+
+.form-group label i {
+    margin-right: 8px;
+    color: #4a6cf7;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 16px 11px 16px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #4a6cf7;
+    box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.1);
+    outline: none;
+}
+
+.form-group input::placeholder {
+    color: #aaa;
+}
+
+/* Iconos dentro de los inputs */
+.form-group:before {
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 15px;
+    top: 38px;
+    color: #777;
+}
+
+/* Botón */
+.btn-login {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #4a6cf7, #7a54e8);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-login:hover {
+    background: linear-gradient(135deg, #3a5ce6, #6a44d8);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn-login:active {
+    transform: translateY(0);
+}
+
+.btn-login i {
+    margin-right: 8px;
+}
+
+/* Pie de página */
+.login-footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.forgot-password {
+    color: #4a6cf7;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 15px;
+    transition: all 0.2s;
+}
+
+.forgot-password:hover {
+    color: #3a5ce6;
+    text-decoration: underline;
+}
+
+.copyright {
+    color: #777;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+/* Alertas */
+.alert {
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+.alert-error {
+    background-color: #ffebee;
+    color: #c62828;
+    border-left: 4px solid #c62828;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .login-container {
+        margin: 0 15px;
+    }
+    
+    .login-header, .login-form {
+        padding: 20px;
+    }
+}

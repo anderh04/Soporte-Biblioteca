@@ -1,0 +1,41 @@
+{
+  "name": "biblioteca/cruba",
+  "description": "Sistema de Gestión de Biblioteca CRUBA",
+  "type": "project",
+  "require": {
+    "php": ">=7.4",
+    "phpoffice/phpspreadsheet": "^1.29",
+    "dompdf/dompdf": "^2.0",
+    "tecnickcom/tcpdf": "^6.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    },
+    "classmap": [
+      "controllers/",
+      "models/"
+    ],
+    "files": [
+      "config/config.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "App\\Tests\\": "tests/"
+    }
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ],
+    "post-update-cmd": [
+      "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ]
+  }
+}
